@@ -25,6 +25,9 @@ import { Link } from "react-router-dom";
 
 import { getScream } from "../redux/actions/dataActions";
 import UnfoldMore from "@material-ui/icons/UnfoldMore";
+import LikeButton from "./LikeButton";
+
+import Chaticon from "@material-ui/icons/Chat";
 
 const styles = theme => ({
   ...theme.spread,
@@ -89,7 +92,7 @@ class ScreamDialog extends Component {
         <CircularProgress size={150} thickness={2} />
       </div>
     ) : (
-      <Grid container spacing={10}>
+      <Grid container spacing={2}>
         <Grid item sm={5}>
           <img src={userImage} alt="Profile" className={classes.profileImage} />
         </Grid>
@@ -108,6 +111,13 @@ class ScreamDialog extends Component {
           </Typography>
           <hr className={classes.invisibleSeperator} />
           <Typography variant="body1">{body}</Typography>
+          <LikeButton screamId={screamId} />
+          <span>{likeCount} likes</span>
+
+          <MyButton tip="comments">
+            <Chaticon color="primary" />
+          </MyButton>
+          <span>{commentCount} comments</span>
         </Grid>
       </Grid>
     );

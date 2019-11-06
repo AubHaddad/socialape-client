@@ -89,10 +89,10 @@ export class Scream extends Component {
           </Typography>
           <LikeButton screamId={screamId} />
           <span>{likeCount} likes</span>
+
           <MyButton tip="comments">
             <Chaticon color="primary" />
           </MyButton>
-
           <span>{commentCount} comments</span>
           <ScreamDialog screamId={screamId} userHandle={userHandle} />
         </CardContent>
