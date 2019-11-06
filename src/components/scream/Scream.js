@@ -8,15 +8,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { connect } from "react-redux";
-import { likeScream, unlikeScream } from "../redux/actions/dataActions";
+import { likeScream, unlikeScream } from "../../redux/actions/dataActions";
 import PropTypes from "prop-types";
 
 import ScreamDialog from "./ScreamDialog";
 
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
 import Chaticon from "@material-ui/icons/Chat";
 
-import DeleteScream from "../components/DeleteScream";
+import DeleteScream from "./DeleteScream";
 import LikeButton from "./LikeButton";
 
 const styles = {

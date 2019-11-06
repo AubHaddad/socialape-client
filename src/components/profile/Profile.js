@@ -16,8 +16,8 @@ import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
 
 import EditDetails from "./EditDetails";
 
-import { logoutUser, uploadImage } from "../redux/actions/userActions";
-import MyButton from "../util/MyButton";
+import { logoutUser, uploadImage } from "../../redux/actions/userActions";
+import MyButton from "../../util/MyButton";
 
 const styles = theme => ({
   paper: {
