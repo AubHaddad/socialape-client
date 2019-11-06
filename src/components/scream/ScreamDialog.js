@@ -4,13 +4,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import theme from "../../util/theme";
 import { connect } from "react-redux";
 
-import { postScream, clearErrors } from "../../redux/actions/dataActions";
-
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 import CloseIcon from "@material-ui/icons/Close";
@@ -26,15 +21,13 @@ import { Link } from "react-router-dom";
 import { getScream } from "../../redux/actions/dataActions";
 import UnfoldMore from "@material-ui/icons/UnfoldMore";
 import LikeButton from "./LikeButton";
+import Comments from "./Comments";
 
 import Chaticon from "@material-ui/icons/Chat";
 
 const styles = theme => ({
   ...theme.spread,
-  invisibleSeperator: {
-    border: "none",
-    margin: 4
-  },
+
   profileImage: {
     maxWidth: 200,
     height: 200,
@@ -82,7 +75,8 @@ class ScreamDialog extends Component {
         likeCount,
         commentCount,
         userImage,
-        userHandle
+        userHandle,
+        comments
       },
       UI: { loading }
     } = this.props;
@@ -119,6 +113,8 @@ class ScreamDialog extends Component {
           </MyButton>
           <span>{commentCount} comments</span>
         </Grid>
+        <hr className={classes.visibleSeperator} />
+        <Comments comments={comments} />
       </Grid>
     );
 
