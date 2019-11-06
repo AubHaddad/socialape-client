@@ -10,6 +10,8 @@ import { getUserData } from "../redux/actions/dataActions";
 
 import StaticProfile from "../components/profile/StaticProfile";
 
+import ScreamSkeleton from "../util/ScreamSkeleton";
+
 class user extends Component {
   state = {
     profile: null,
@@ -37,7 +39,7 @@ class user extends Component {
     const { screamIdParam } = this.state;
 
     const screamsMarkup = loading ? (
-      <p>Loading data ...</p>
+      <ScreamSkeleton />
     ) : screams === null ? (
       <p>No screams for this user</p>
     ) : !screamIdParam ? (
