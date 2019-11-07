@@ -95,9 +95,6 @@ export default {
         margin: "20px 10px"
       }
     },
-    paper: {
-      padding: 20
-    },
     profile: {
       "& .image-wrapper": {
         textAlign: "center",

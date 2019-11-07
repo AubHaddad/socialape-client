@@ -28,6 +28,8 @@ import user from "./pages/user";
 import axios from "axios";
 
 const theme = createMuiTheme(themeFile);
+axios.defaults.baseURL =
+  "https://europe-west1-socialape-fa2ec.cloudfunctions.net/api";
 
 const token = localStorage.FBIdToken;
 

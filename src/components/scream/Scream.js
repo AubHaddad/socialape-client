@@ -8,7 +8,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { connect } from "react-redux";
-import { likeScream, unlikeScream } from "../../redux/actions/dataActions";
 import PropTypes from "prop-types";
 
 import ScreamDialog from "./ScreamDialog";
